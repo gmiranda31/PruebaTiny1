@@ -26,12 +26,15 @@ module tt_um_example (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, uio_in[7:1],1'b0};
 
+  wire sel;
+assign sel = uio_in[0];
+
   assign uio_in[0] = 1'b0;
 
   mux_2to1_4b U0(
   .a_i(ui_in[3:0]),
   .b_i(ui_in[7:4]),
-  .s_i(uio_in[0]),
+  .s_i(sel),
   .q_o(uo_out[3:0])
   );
 
