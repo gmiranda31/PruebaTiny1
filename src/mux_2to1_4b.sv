@@ -16,7 +16,7 @@ always_comb begin
   if(s_i == 1'b0) begin
     q_o = a_i;
   end else begin
-    q_o == b_i;
+    q_o = b_i;
   end
 end
   
