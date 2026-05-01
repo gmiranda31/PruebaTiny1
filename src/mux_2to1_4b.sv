@@ -4,7 +4,7 @@
 * Rev. 1 28 July 2024
 */
 
-timescale 1ns/1ps;
+`timescale 1ns/1ps;
 
 module mux_2to1_4b(
   input logic [3:0]  a_i,
